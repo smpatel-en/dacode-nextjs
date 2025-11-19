@@ -6,7 +6,7 @@ type ButtonVariant =
   | "secondary"
   | "outline-primary"
   | "outline-secondary";
-type ButtonSize = "small" | "large";
+type ButtonSize = "small" | "large" | "none";
 const defaultClass =
   "cursor-pointer rounded-full border-2 border-transparent text-base lg:text-xl/[120%] font-bold tracking-[0.5%] transition-colors duration-200";
 const variantClasses: Record<ButtonVariant, string> = {
@@ -20,6 +20,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 const sizeClasses: Record<ButtonSize, string> = {
   small: "lg:px-10.5 lg:py-3.5 md:px-7.5 md:py-2.5 px-4 py-2",
   large: "lg:px-[39px] lg:py-5.5 md:px-9 md:py-4 px-6 py-3",
+  none: "",
 };
 
 interface ButtonProps
