@@ -8,16 +8,16 @@ import Button from "../core/Button";
 
 import Logo from "@public/assets/images/logo.png";
 
+const navigationLinks: Array<{ name: string; href: string }> = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Case", href: "/case" },
+  { name: "DaCode Specialists", href: "/specialists" },
+  { name: "Blog", href: "/blog" },
+];
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-  const navigationLinks: Array<{ name: string; href: string }> = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Case", href: "/case" },
-    { name: "DaCode Specialists", href: "/specialists" },
-    { name: "Blog", href: "/blog" },
-  ];
 
   React.useEffect(() => {
     const handleResize = () => {
