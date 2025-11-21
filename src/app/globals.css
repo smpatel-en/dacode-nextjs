@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "swiper/css";
 
 :root {
   /* Color Variables */
@@ -6,6 +7,8 @@
   --secondary: #7bc0e3;
   --dark: #292525;
   --light: #ffffff;
+
+  --primary-light-15: color-mix(in srgb, var(--primary) 15%, var(--light));
 
   /* Shadow Variables */
   --shadow-primary: 0px 46px 52px 0px #60e1cb8f;
@@ -23,6 +26,7 @@
   --color-secondary: var(--secondary);
   --color-dark: var(--dark);
   --color-light: var(--light);
+  --color-primary-light-15: var(--primary-light-15);
 
   --shadow-primary: var(--shadow-primary);
   --shadow-primary-dark: var(--shadow-primary-dark);
@@ -51,7 +55,7 @@
     @apply mx-auto px-3 lg:px-6;
   }
   img {
-    @apply block h-full max-w-full object-cover;
+    @apply block h-full w-full object-cover;
   }
 
   /* Text */

@@ -5,7 +5,6 @@ import Button from "@/components/core/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Controller } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-import "swiper/css";
 import Image from "next/image";
 import { useState } from "react";
 import PortfolioImage1 from "@public/assets/images/showcase-1.jpg";
@@ -85,14 +84,15 @@ export default function OurWork() {
               ))}
             </div>
 
+            {/* Slider For Images */}
             <div className="relative mb-8">
               <Swiper
                 modules={[Navigation, Controller]}
                 slidesPerView={3}
                 spaceBetween={35}
                 navigation={{
-                  nextEl: ".custom-swiper-button-next",
-                  prevEl: ".custom-swiper-button-prev",
+                  nextEl: ".work-custom-swiper-button-next",
+                  prevEl: ".work-custom-swiper-button-prev",
                 }}
                 breakpoints={{
                   0: {
@@ -124,14 +124,14 @@ export default function OurWork() {
                 <Button
                   size="none"
                   variant="outline-primary"
-                  className="custom-swiper-button-prev bg-light z-1 hidden -translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
+                  className="work-custom-swiper-button-prev bg-light z-1 hidden -translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
                 >
                   <IoIosArrowBack className="text-4xl" />
                 </Button>
                 <Button
                   size="none"
                   variant="outline-primary"
-                  className="custom-swiper-button-next bg-light z-1 hidden translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
+                  className="work-custom-swiper-button-next bg-light z-1 hidden translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
                 >
                   <IoIosArrowForward className="text-4xl" />
                 </Button>
@@ -140,13 +140,9 @@ export default function OurWork() {
 
             {/* Swiper Slider For Text */}
             <Swiper
-              modules={[Navigation, Controller]}
+              modules={[Controller]}
               slidesPerView={3}
               spaceBetween={35}
-              navigation={{
-                nextEl: ".custom-swiper-button-next",
-                prevEl: ".custom-swiper-button-prev",
-              }}
               breakpoints={{
                 0: {
                   slidesPerView: 1,

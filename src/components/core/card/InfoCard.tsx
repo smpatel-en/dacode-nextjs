@@ -7,7 +7,7 @@ const defaultClass =
   "bg-light relative flex flex-col overflow-hidden rounded-xl p-5 pt-15 md:p-8 md:pt-20";
 
 interface InfoCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  icon: StaticImageData;
+  icon?: StaticImageData;
   title: string;
   description?: string;
   href: string;
@@ -23,11 +23,15 @@ export default function InfoCard({
 }: InfoCardProps) {
   return (
     <div className={cn(defaultClass, className)} {...props}>
-      <div className="bg-primary absolute inset-0 h-[7px] w-full" />
-      <div className="relative mb-6 w-fit lg:mb-8.5">
-        <Image src={icon} alt={title} />
-        <div className="bg-primary/15 absolute inset-0 h-full w-full -translate-3 rounded-full"></div>
-      </div>
+      {icon && (
+        <>
+          <div className="bg-primary absolute inset-0 h-[7px] w-full" />
+          <div className="relative mb-6 w-fit lg:mb-8.5">
+            <Image src={icon} alt={title} />
+            <div className="bg-primary/15 absolute inset-0 h-full w-full -translate-3 rounded-full"></div>
+          </div>
+        </>
+      )}
       <h3 className="mb-2 lg:mb-4">{title}</h3>
       <p className="mb-6 lg:mb-8">{description}</p>
       <Link

@@ -49,7 +49,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-primary/14">
+    <section className="bg-primary-light-15">
       <div className="container max-w-6xl">
         {/* Wrapper */}
         <div>
