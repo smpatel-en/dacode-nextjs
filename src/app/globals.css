@@ -7,6 +7,13 @@
   --dark: #292525;
   --light: #ffffff;
 
+  /* Shadow Variables */
+  --shadow-primary: 0px 46px 52px 0px #60e1cb8f;
+  --shadow-primary-dark: 0px 46px 52px 0px #36b8a2;
+  --shadow-lg: 0px 97px 90px 0px #07003b1f;
+  --shadow-md: 0px 56px 60px -14px #0d0f451a;
+  --shadow-sm: 0px 32px 41px 0px #00000021;
+
   /* Font Variables */
   --font-dm-sans: "DM Sans", sans-serif;
 }
@@ -16,7 +23,15 @@
   --color-secondary: var(--secondary);
   --color-dark: var(--dark);
   --color-light: var(--light);
+
+  --shadow-primary: var(--shadow-primary);
+  --shadow-primary-dark: var(--shadow-primary-dark);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-md: var(--shadow-md);
+  --shadow-sm: var(--shadow-sm);
+
   --font-dm-sans: var(--font-dm-sans);
+
   --breakpoint-xs: 480px;
 }
 

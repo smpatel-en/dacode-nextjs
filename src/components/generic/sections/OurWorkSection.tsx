@@ -78,7 +78,6 @@ export default function OurWork() {
                   variant={
                     activeTag === tag ? "secondary" : "outline-secondary"
                   }
-                  size="small"
                   onClick={() => setActiveTag(tag)}
                 >
                   {tag}
@@ -173,7 +172,6 @@ export default function OurWork() {
       </div>
       <Button
         variant="dark"
-        size="small"
         className="absolute bottom-0 left-1/2 z-1 -translate-x-1/2 translate-y-1/2"
       >
         See All

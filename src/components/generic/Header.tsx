@@ -71,12 +71,9 @@ export default function Header() {
               </ul>
               {/* Navigation CTA Wrapper*/}
               <div className="flex items-center gap-4">
-                <Button className="hidden md:block" size="small">
-                  Request a Quote
-                </Button>
+                <Button className="hidden md:block">Request a Quote</Button>
                 <Button
                   className="block xl:hidden"
-                  size="small"
                   variant="outline-primary"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
@@ -102,7 +99,7 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Button className="mt-2 block w-fit md:hidden" size="small">
+              <Button className="mt-2 block w-fit md:hidden">
                 Request a Quote
               </Button>
             </div>

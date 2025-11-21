@@ -17,7 +17,7 @@ const variantClasses: Record<ButtonVariant, string> = {
     "border-primary text-primary hover:bg-primary hover:text-white",
   "outline-secondary":
     "border-secondary text-secondary hover:bg-secondary hover:text-white",
-  dark: "bg-dark text-white hover:bg-primary hover:text-white",
+  dark: "bg-dark text-white hover:bg-dark/80 hover:text-white",
 };
 const sizeClasses: Record<ButtonSize, string> = {
   small: "lg:px-10.5 lg:py-3.5 md:px-7.5 md:py-2.5 px-4 py-2",
@@ -36,7 +36,7 @@ interface ButtonProps
 export default function Button({
   children,
   variant = "primary",
-  size = "large",
+  size = "small",
   className,
   href,
   ...props

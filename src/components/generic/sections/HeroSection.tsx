@@ -22,10 +22,8 @@ export default function HeroSection() {
             </p>
             {/* Hero CTA Button Wrapper */}
             <div className="xs:justify-start xs:flex-row flex flex-col items-center justify-center gap-5">
-              <Button>Get Started</Button>
-              <Button variant="outline-primary" size="small">
-                Contact Us
-              </Button>
+              <Button size="large">Get Started</Button>
+              <Button variant="outline-primary">Contact Us</Button>
             </div>
           </div>
           <Image
