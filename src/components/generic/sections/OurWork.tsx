@@ -1,6 +1,7 @@
 "use client";
 
 import Heading from "@/components/core/Heading";
+import Button from "@/components/core/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Controller } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -10,41 +11,57 @@ import { useState } from "react";
 import PortfolioImage1 from "@public/assets/images/showcase-1.jpg";
 import PortfolioImage2 from "@public/assets/images/showcase-2.jpg";
 import PortfolioImage3 from "@public/assets/images/showcase-3.jpg";
-import Button from "@/components/core/Button";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const portfolioItems = [
   {
     image: PortfolioImage1,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+    tag: "Website Optimization",
   },
   {
     image: PortfolioImage2,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+    tag: "Website Optimization",
   },
   {
     image: PortfolioImage3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+    tag: "Website Redesign",
   },
   {
     image: PortfolioImage1,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+    tag: "Website Redesign",
   },
   {
     image: PortfolioImage2,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+    tag: "Search Engine Optimization",
   },
   {
     image: PortfolioImage3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
+    tag: "Search Engine Optimization",
   },
 ];
 export default function OurWork() {
   const [firstSwiper, setFirstSwiper] = useState<SwiperType | null>(null);
   const [secondSwiper, setSecondSwiper] = useState<SwiperType | null>(null);
+  const [activeTag, setActiveTag] = useState("All");
+
+  const uniqueTags = [
+    "All",
+    ...new Set(portfolioItems.map((item) => item.tag)),
+  ];
+
+  const filteredItems =
+    activeTag === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.tag === activeTag);
 
   return (
-    <section>
+    <section className="relative">
       <div className="container">
         {/* Wrapper */}
         <div>
@@ -53,7 +70,21 @@ export default function OurWork() {
 
           {/* Body */}
           <div>
-            {/* Swiper Slider For Images */}
+            {/* Filter tags */}
+            <div className="mb-10 flex flex-wrap justify-center gap-4">
+              {uniqueTags.map((tag, index) => (
+                <Button
+                  key={index}
+                  variant={
+                    activeTag === tag ? "secondary" : "outline-secondary"
+                  }
+                  size="small"
+                  onClick={() => setActiveTag(tag)}
+                >
+                  {tag}
+                </Button>
+              ))}
+            </div>
 
             <div className="relative mb-8">
               <Swiper
@@ -64,10 +95,21 @@ export default function OurWork() {
                   nextEl: ".custom-swiper-button-next",
                   prevEl: ".custom-swiper-button-prev",
                 }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                  },
+                }}
                 onSwiper={setFirstSwiper}
                 controller={{ control: secondSwiper }}
               >
-                {portfolioItems.map((item, index) => (
+                {filteredItems.map((item, index) => (
                   <SwiperSlide key={index}>
                     <div className="aspect-3/2 overflow-hidden rounded-2xl">
                       <Image
@@ -83,19 +125,18 @@ export default function OurWork() {
                 <Button
                   size="none"
                   variant="outline-primary"
-                  className="custom-swiper-button-prev bg-light z-1 grid h-16 w-16 -translate-x-1/2 place-items-center"
+                  className="custom-swiper-button-prev bg-light z-1 hidden -translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
                 >
                   <IoIosArrowBack className="text-4xl" />
                 </Button>
                 <Button
                   size="none"
                   variant="outline-primary"
-                  className="custom-swiper-button-next bg-light z-1 grid h-16 w-16 translate-x-1/2 place-items-center"
+                  className="custom-swiper-button-next bg-light z-1 hidden translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
                 >
                   <IoIosArrowForward className="text-4xl" />
                 </Button>
               </div>
-              <div className="bg-primary absolute inset-0 h-full w-full translate-y-1/2" />
             </div>
 
             {/* Swiper Slider For Text */}
@@ -107,10 +148,21 @@ export default function OurWork() {
                 nextEl: ".custom-swiper-button-next",
                 prevEl: ".custom-swiper-button-prev",
               }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
               onSwiper={setSecondSwiper}
               controller={{ control: firstSwiper }}
             >
-              {portfolioItems.map((item, index) => (
+              {filteredItems.map((item, index) => (
                 <SwiperSlide key={index}>
                   <p className="text-lg/[170%]">{item.text}</p>
                 </SwiperSlide>
@@ -119,6 +171,13 @@ export default function OurWork() {
           </div>
         </div>
       </div>
+      <Button
+        variant="dark"
+        size="small"
+        className="absolute bottom-0 left-1/2 z-1 -translate-x-1/2 translate-y-1/2"
+      >
+        See All
+      </Button>
     </section>
   );
 }

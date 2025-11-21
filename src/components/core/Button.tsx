@@ -5,7 +5,8 @@ type ButtonVariant =
   | "primary"
   | "secondary"
   | "outline-primary"
-  | "outline-secondary";
+  | "outline-secondary"
+  | "dark";
 type ButtonSize = "small" | "large" | "none";
 const defaultClass =
   "cursor-pointer rounded-full border-2 border-transparent text-base lg:text-xl/[120%] font-bold tracking-[0.5%] transition-colors duration-200";
@@ -16,6 +17,7 @@ const variantClasses: Record<ButtonVariant, string> = {
     "border-primary text-primary hover:bg-primary hover:text-white",
   "outline-secondary":
     "border-secondary text-secondary hover:bg-secondary hover:text-white",
+  dark: "bg-dark text-white hover:bg-primary hover:text-white",
 };
 const sizeClasses: Record<ButtonSize, string> = {
   small: "lg:px-10.5 lg:py-3.5 md:px-7.5 md:py-2.5 px-4 py-2",
