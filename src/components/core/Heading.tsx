@@ -6,11 +6,11 @@ type HeadingType = "section" | "page";
 type HeadingVariant = "centered" | "left";
 type HeadingLastWordHighlight = boolean;
 
-const defaultClass = {
-  section: "flex flex-col gap-6.5",
-  page: "relative -mb-30 flex flex-col gap-6.5 pt-20 pb-40 lg:-mb-60 lg:pt-40 lg:pb-80",
+// Deafult Classes
+const typeClasses: Record<HeadingType, string> = {
+  section: "flex flex-col gap-6.5 mb-12.5",
+  page: "relative -mb-30 flex flex-col gap-6.5 pt-20 pb-30 lg:-mb-40 lg:pt-30 lg:pb-50",
 };
-
 interface HeadingProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description?: string;
@@ -19,11 +19,6 @@ interface HeadingProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: HeadingVariant;
   lastWordHighlight?: HeadingLastWordHighlight;
 }
-
-const typeClasses: Record<HeadingType, string> = {
-  section: "mb-12.5",
-  page: "",
-};
 
 const variantClasses: Record<HeadingVariant, string> = {
   centered: "items-center text-center",
@@ -44,7 +39,6 @@ export default function Heading({
   return type === "section" ? (
     <div
       className={cn(
-        defaultClass.section,
         type && typeClasses[type],
         variant && variantClasses[variant],
         lastWordHighlight && "last-word-highlight",
@@ -67,13 +61,13 @@ export default function Heading({
           : title}
       </h2>
       {description && (
-        <p className="title-description mx-auto max-w-200">{description}</p>
+        <p className="title-description max-w-200">{description}</p>
       )}
+      {children}
     </div>
   ) : (
     <section
       className={cn(
-        defaultClass.page,
         type && typeClasses[type],
         variant && variantClasses[variant],
         lastWordHighlight && "last-word-highlight",

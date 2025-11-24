@@ -3,7 +3,7 @@ import CtaSection from "@/components/generic/sections/CtaSection";
 import InfoSection from "@/components/generic/sections/InfoSection";
 import Heading from "@/components/core/Heading";
 
-export default function Services() {
+export default function ServicesPage() {
   return (
     <>
       <Heading

@@ -48,19 +48,17 @@ export default function BlogSection() {
       <div className="container">
         {/* Wrapper */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
-          {/* Left */}
-          <div className="z-1">
-            {/* Heading */}
-            <Heading
-              title="DaCode Blog"
-              subtitle="News & Articles"
-              description="On daCode blog we will review the latest in web development for the SaaS-, tech- and crypto industry."
-              variant="left"
-              className="mb-6.5 max-w-lg"
-            />
+          {/* Left | Header */}
+          <Heading
+            title="DaCode Blog"
+            subtitle="News & Articles"
+            description="On daCode blog we will review the latest in web development for the SaaS-, tech- and crypto industry."
+            variant="left"
+            className="z-1 mb-6.5 max-w-lg"
+          >
             {/* CTA Button */}
             <Button variant="outline-secondary">See All</Button>
-          </div>
+          </Heading>
           {/* Right */}
           <div className="relative z-0">
             <Swiper
