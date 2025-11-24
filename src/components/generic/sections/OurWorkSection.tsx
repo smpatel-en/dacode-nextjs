@@ -7,43 +7,9 @@ import { Navigation, Controller } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
-import PortfolioImage1 from "@public/assets/images/showcase-1.jpg";
-import PortfolioImage2 from "@public/assets/images/showcase-2.jpg";
-import PortfolioImage3 from "@public/assets/images/showcase-3.jpg";
+import { portfolioItems } from "@/lib/data";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const portfolioItems = [
-  {
-    image: PortfolioImage1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
-    tag: "Website Optimization",
-  },
-  {
-    image: PortfolioImage2,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
-    tag: "Website Optimization",
-  },
-  {
-    image: PortfolioImage3,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
-    tag: "Website Redesign",
-  },
-  {
-    image: PortfolioImage1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
-    tag: "Website Redesign",
-  },
-  {
-    image: PortfolioImage2,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
-    tag: "Search Engine Optimization",
-  },
-  {
-    image: PortfolioImage3,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum",
-    tag: "Search Engine Optimization",
-  },
-];
 export default function OurWork() {
   const [firstSwiper, setFirstSwiper] = useState<SwiperType | null>(null);
   const [secondSwiper, setSecondSwiper] = useState<SwiperType | null>(null);

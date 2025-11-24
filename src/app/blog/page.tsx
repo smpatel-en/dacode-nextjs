@@ -11,6 +11,7 @@ export default function BlogPage() {
         title="News & Articles"
         description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et."
         type="page"
+        insetMargin={false}
       >
         <div className="bg-light focus-within:border-dark mx-auto flex w-full max-w-lg gap-2 rounded-full border-2 border-transparent p-1 transition-all duration-300">
           <input

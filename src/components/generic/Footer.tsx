@@ -1,7 +1,11 @@
+"use client";
+
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@public/assets/images/logo.png";
 import FooterBackground from "@public/assets/images/footer-bg.png";
+import { SlArrowDown } from "react-icons/sl";
 
 const optionGroups: Array<{
   header: string;
@@ -41,6 +45,21 @@ const socialLinks: Array<{ name: string; href: string }> = [
 ];
 
 export default function Footer() {
+  const [selectedLanguage, setSelectedLanguage] = React.useState("EN");
+  const [showDropdown, setShowDropdown] = React.useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setShowDropdown(false);
+    };
+    if (showDropdown) {
+      document.addEventListener("click", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [showDropdown]);
+
   return (
     <footer className="relative">
       {/* Footer Background Image*/}
@@ -99,7 +118,31 @@ export default function Footer() {
                 </div>
               ))}
               <div className="flex flex-col gap-7">
-                <h4>Language</h4>
+                <div className="relative w-fit">
+                  <h4
+                    className="inline-flex cursor-pointer items-center gap-2"
+                    onClick={() => setShowDropdown(!showDropdown)}
+                  >
+                    Language <SlArrowDown className="text-lg" />
+                  </h4>
+                  {showDropdown && (
+                    <ul className="absolute right-0 translate-y-2 leading-[30px] lg:translate-y-5">
+                      {["EN", "ES", "FR", "DE"].map((lang) => (
+                        <li key={lang} className="w-full">
+                          <button
+                            className={`${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} hover:text-dark/80 text-right transition-colors duration-300`}
+                            onClick={() => {
+                              setSelectedLanguage(lang);
+                              setShowDropdown(false);
+                            }}
+                          >
+                            {lang}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
           </div>

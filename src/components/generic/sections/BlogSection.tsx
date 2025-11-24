@@ -6,39 +6,7 @@ import Heading from "@/components/core/Heading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-
-const blogPosts = [
-  {
-    title: "Why Your SaaS Business should use WordPress",
-    description:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
-    href: "#",
-  },
-  {
-    title: "Why Your SaaS Business should use WordPress",
-    description:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
-    href: "#",
-  },
-  {
-    title: "Why Your SaaS Business should use WordPress",
-    description:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
-    href: "#",
-  },
-  {
-    title: "Why Your SaaS Business should use WordPress",
-    description:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
-    href: "#",
-  },
-  {
-    title: "Why Your SaaS Business should use WordPress",
-    description:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
-    href: "#",
-  },
-];
+import { blogPostsH as blogPosts } from "@/lib/data";
 
 export default function BlogSection() {
   return (

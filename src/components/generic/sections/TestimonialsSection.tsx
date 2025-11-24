@@ -6,57 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Controller } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
-
-import User1 from "@public/assets/images/user-1.png";
-import User2 from "@public/assets/images/user-2.png";
-import User3 from "@public/assets/images/user-3.png";
+import { testimonials } from "@/lib/data";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import Button from "@/components/core/Button";
-
-const testimonials = [
-  {
-    name: "Paulus Haverinen",
-    role: "Owner, Ikirakenne Ltd",
-    avatar: User3,
-    rating: 5,
-    comment:
-      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
-  },
-  {
-    name: "Paulus Haverinen",
-    role: "Owner, Ikirakenne Ltd",
-    avatar: User2,
-    rating: 5,
-    comment:
-      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
-  },
-  {
-    name: "Paulus Haverinen",
-    role: "Owner, Ikirakenne Ltd",
-    avatar: User1,
-    rating: 5,
-    comment:
-      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
-  },
-  {
-    name: "Paulus Haverinen",
-    role: "Owner, Ikirakenne Ltd",
-    avatar: User2,
-    rating: 5,
-    comment:
-      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
-  },
-  {
-    name: "Paulus Haverinen",
-    role: "Owner, Ikirakenne Ltd",
-    avatar: User3,
-    rating: 5,
-    comment:
-      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
-  },
-];
 
 export default function TestimonialsSection() {
   const [firstSwiper, setFirstSwiper] = useState<SwiperType | null>(null);

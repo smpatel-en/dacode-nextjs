@@ -4,13 +4,15 @@ import Image from "next/image";
 
 type HeadingType = "section" | "page";
 type HeadingVariant = "centered" | "left";
+type InsetMargin = "true" | "false";
 type HeadingLastWordHighlight = boolean;
 
 // Deafult Classes
 const typeClasses: Record<HeadingType, string> = {
   section: "flex flex-col gap-6.5 mb-12.5",
-  page: "relative -mb-30 flex flex-col gap-6.5 pt-20 pb-30 lg:-mb-40 lg:pt-30 lg:pb-50",
+  page: "relative flex flex-col gap-6.5",
 };
+
 interface HeadingProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description?: string;
@@ -18,7 +20,13 @@ interface HeadingProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: HeadingType;
   variant?: HeadingVariant;
   lastWordHighlight?: HeadingLastWordHighlight;
+  insetMargin?: boolean;
 }
+
+const InsetMarginClasses: Record<InsetMargin, string> = {
+  true: "-mb-30 pt-20 pb-30 lg:-mb-40 lg:pt-30 lg:pb-50",
+  false: "py-20 lg:py-30",
+};
 
 const variantClasses: Record<HeadingVariant, string> = {
   centered: "items-center text-center",
@@ -32,6 +40,7 @@ export default function Heading({
   className,
   type = "section",
   variant = "centered",
+  insetMargin = type === "page" ? true : false,
   lastWordHighlight = false,
   children,
   ...props
@@ -40,6 +49,7 @@ export default function Heading({
     <div
       className={cn(
         type && typeClasses[type],
+
         variant && variantClasses[variant],
         lastWordHighlight && "last-word-highlight",
         className,
@@ -69,6 +79,7 @@ export default function Heading({
     <section
       className={cn(
         type && typeClasses[type],
+        InsetMarginClasses[String(insetMargin) as InsetMargin],
         variant && variantClasses[variant],
         lastWordHighlight && "last-word-highlight",
         className,

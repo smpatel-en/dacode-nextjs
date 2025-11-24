@@ -1,29 +1,7 @@
 import Heading from "@/components/core/Heading";
 import Image from "next/image";
 import WorkingRemotely from "@public/assets/images/working-remotely.png";
-
-const strategyItems = [
-  {
-    title: "Your Idea",
-    description:
-      "In order for us at daCode to know that we are a good fit for your project we always start with screening questions in order to make sure that we are a suitable match for your company.",
-  },
-  {
-    title: "Your Idea",
-    description:
-      "In order for us at daCode to know that we are a good fit for your project we always start with screening questions in order to make sure that we are a suitable match for your company.",
-  },
-  {
-    title: "Your Idea",
-    description:
-      "In order for us at daCode to know that we are a good fit for your project we always start with screening questions in order to make sure that we are a suitable match for your company.",
-  },
-  {
-    title: "Your Idea",
-    description:
-      "In order for us at daCode to know that we are a good fit for your project we always start with screening questions in order to make sure that we are a suitable match for your company.",
-  },
-];
+import { strategyItems } from "@/lib/data";
 
 export default function Strategy() {
   return (

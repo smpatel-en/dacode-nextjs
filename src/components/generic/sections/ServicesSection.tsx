@@ -1,53 +1,7 @@
 import InfoCard from "@/components/core/card/InfoCard";
 import Heading from "@/components/core/Heading";
 import { cn } from "@/lib/utils";
-import Website from "@public/assets/svg/web-site.svg";
-
-const services = [
-  {
-    icon: Website,
-    title: "WordPress Site",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
-    href: "/",
-  },
-  {
-    icon: Website,
-    title: "WordPress Site",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
-    href: "/",
-  },
-  {
-    icon: Website,
-    title: "WordPress Site",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
-    href: "/",
-  },
-  {
-    icon: Website,
-    title: "WordPress Site",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
-    href: "/",
-  },
-  {
-    icon: Website,
-    title: "WordPress Site",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
-    href: "/",
-  },
-  {
-    icon: Website,
-    title: "WordPress Site",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
-    href: "/",
-  },
-];
-
+import { services } from "@/lib/data";
 interface ServicesSectionProps extends React.HTMLAttributes<HTMLElement> {
   explicitContainer?: boolean;
 }
