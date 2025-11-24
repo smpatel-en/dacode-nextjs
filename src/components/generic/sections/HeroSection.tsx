@@ -14,7 +14,7 @@ export default function HeroSection() {
               We help you create your{" "}
               <span className="text-primary">website</span>
             </h1>
-            <p className="title-description">
+            <p className="title-description opacity-70">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
               turpis adipiscing tempus, magna elit nunc iaculis sit. Libero
               velit quis leo non. At donec egestas cras in libero pellentesque.

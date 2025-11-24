@@ -1,10 +1,15 @@
 import { cn } from "@/lib/utils";
+import PageTitleBanner from "@public/assets/images/cta-bg.png";
+import Image from "next/image";
 
 type HeadingType = "section" | "page";
 type HeadingVariant = "centered" | "left";
 type HeadingLastWordHighlight = boolean;
 
-const defaultClass = "flex flex-col gap-6.5";
+const defaultClass = {
+  section: "flex flex-col gap-6.5",
+  page: "relative -mb-30 flex flex-col gap-6.5 pt-20 pb-40 lg:-mb-60 lg:pt-40 lg:pb-80",
+};
 
 interface HeadingProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -33,12 +38,13 @@ export default function Heading({
   type = "section",
   variant = "centered",
   lastWordHighlight = false,
+  children,
   ...props
 }: HeadingProps) {
-  return (
+  return type === "section" ? (
     <div
       className={cn(
-        defaultClass,
+        defaultClass.section,
         type && typeClasses[type],
         variant && variantClasses[variant],
         lastWordHighlight && "last-word-highlight",
@@ -61,8 +67,35 @@ export default function Heading({
           : title}
       </h2>
       {description && (
-        <p className="title-description max-w-200">{description}</p>
+        <p className="title-description mx-auto max-w-200">{description}</p>
       )}
     </div>
+  ) : (
+    <section
+      className={cn(
+        defaultClass.page,
+        type && typeClasses[type],
+        variant && variantClasses[variant],
+        lastWordHighlight && "last-word-highlight",
+        className,
+      )}
+      {...props}
+    >
+      <Image
+        src={PageTitleBanner}
+        alt="Page Title Banner"
+        className="absolute inset-0 -z-1"
+      />
+      <div className="container">
+        {/* Wrapper */}
+        <div className="flex flex-col gap-6.5">
+          <h1>{title}</h1>
+          <p className="title-description mx-auto max-w-200 opacity-70">
+            {description}
+          </p>
+          {children}
+        </div>
+      </div>
+    </section>
   );
 }

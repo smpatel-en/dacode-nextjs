@@ -136,6 +136,7 @@ export default function TestimonialsSection() {
               centeredSlides={true}
               onSwiper={setSecondSwiper}
               controller={{ control: firstSwiper }}
+              slideToClickedSlide={true}
               breakpoints={{
                 0: {
                   slidesPerView: 2,
@@ -167,7 +168,7 @@ export default function TestimonialsSection() {
                       <>
                         {/* Image Wrapper */}
                         <div
-                          className={`mx-auto mb-7.5 max-w-30 overflow-hidden rounded-full transition-all duration-300 ${getSlideScale()} ${getSlideOpacity()} ${isActive ? "border-secondary/50 border-4 shadow-sm" : "border-2 border-transparent"} `}
+                          className={`mx-auto mb-7.5 max-w-30 overflow-hidden rounded-full transition-all duration-300 ${getSlideScale()} ${getSlideOpacity()} ${isActive ? "border-secondary/50 border-4 shadow-sm" : "cursor-pointer border-2 border-transparent"} `}
                         >
                           <Image
                             src={testimonial.avatar}
