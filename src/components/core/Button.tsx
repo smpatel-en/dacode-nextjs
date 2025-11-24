@@ -10,7 +10,7 @@ type ButtonVariant =
   | "ghost";
 type ButtonSize = "small" | "large" | "none";
 const defaultClass =
-  "cursor-pointer rounded-full border-2 border-transparent text-base lg:text-xl/[120%] font-bold tracking-[0.5%] transition-all duration-200 disabled:pointer-events-none disabled:opacity-20 active:scale-98";
+  "cursor-pointer rounded-full border-2 border-transparent font-bold tracking-[0.5%] transition-all duration-200 disabled:pointer-events-none disabled:opacity-20 active:scale-98";
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-primary text-white hover:bg-dark",
   secondary: "bg-secondary text-white hover:bg-dark",
@@ -22,9 +22,9 @@ const variantClasses: Record<ButtonVariant, string> = {
   ghost: "backdrop-blur-lg text-dark hover:bg-dark/5",
 };
 const sizeClasses: Record<ButtonSize, string> = {
-  small: "lg:px-10.5 lg:py-3.5 md:px-7.5 md:py-2.5 px-4 py-2",
-  large: "lg:px-[39px] lg:py-5.5 md:px-9 md:py-4 px-6 py-3",
-  none: "",
+  small: "lg:px-8 lg:py-2.5 md:px-6 md:py-2 px-4 py-2 text-base lg:text-lg",
+  large: "lg:px-8.5 lg:py-3 md:px-6 md:py-3 px-4 py-2 text-lg lg:text-xl",
+  none: "text-base lg:text-lg",
 };
 
 interface ButtonProps

@@ -19,6 +19,7 @@ const navigationLinks: Array<{ name: string; href: string }> = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
   const pathname = usePathname();
 
   React.useEffect(() => {
@@ -27,30 +28,35 @@ export default function Header() {
         setIsMobileMenuOpen(false);
       }
     };
-
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isMobileMenuOpen]);
 
   return (
     <>
-      <header className="bg-light fixed top-0 z-10 w-full py-2">
+      <header
+        className={`bg-light/90 fixed top-0 z-10 w-full border-b-2 py-3 backdrop-blur-md transition-all duration-300 lg:py-5 ${isScrolled ? "border-b-dark/30" : "border-b-transparent"} `}
+      >
         <div className="container">
           {/* Navigation Wrapper | Desktop */}
           <div className="flex items-center justify-between gap-4">
             {/* Logo */}
             <Link href="/">
               <Image
-                className="max-w-36 object-contain sm:max-w-42 lg:max-w-none"
+                className="max-w-36 object-contain transition-transform duration-300 hover:scale-103 sm:max-w-42 lg:max-w-none"
                 src={Logo}
                 alt="dcCode Logo"
               />

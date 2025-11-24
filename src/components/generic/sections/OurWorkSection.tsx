@@ -133,6 +133,7 @@ export default function OurWork() {
         </div>
       </div>
       <Button
+        size="large"
         variant="dark"
         className="absolute bottom-0 left-1/2 z-1 -translate-x-1/2 translate-y-1/2"
       >

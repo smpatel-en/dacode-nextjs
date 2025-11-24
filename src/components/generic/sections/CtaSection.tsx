@@ -17,7 +17,12 @@ export default function CtaSection() {
           />
 
           {/* CTA Button */}
-          <Button variant="dark" className="mx-auto">
+          <Button
+            size="large"
+            href="mailto:dacode@example.com"
+            variant="dark"
+            className="mx-auto"
+          >
             DaCode@example.com
           </Button>
         </div>
