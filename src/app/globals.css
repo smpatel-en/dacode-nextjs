@@ -43,7 +43,7 @@
 
 @layer base {
   body {
-    @apply bg-light text-dark font-dm-sans selection:bg-primary-light-60 text-sm font-medium lg:text-base;
+    @apply bg-light text-dark font-dm-sans selection:text-dark/80 selection:bg-primary-light-60 text-sm font-medium lg:text-base;
   }
   main {
     @apply min-h-screen pt-14 sm:pt-16 lg:pt-18;

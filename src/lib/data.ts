@@ -2,7 +2,12 @@ import Website from "@public/assets/svg/web-site.svg";
 import PortfolioImage1 from "@public/assets/images/showcase-1.jpg";
 import PortfolioImage2 from "@public/assets/images/showcase-2.jpg";
 import PortfolioImage3 from "@public/assets/images/showcase-3.jpg";
-import BlogImage from "@public/assets/images/blog-post-1.png";
+import BlogPost1 from "@public/assets/images/blog-post-1.png";
+import BlogPost2 from "@public/assets/images/blog-post-2.png";
+import BlogPost3 from "@public/assets/images/blog-post-3.png";
+import BlogPost4 from "@public/assets/images/blog-post-4.png";
+import BlogPost5 from "@public/assets/images/blog-post-5.png";
+
 import User1 from "@public/assets/images/user-1.png";
 import User2 from "@public/assets/images/user-2.png";
 import User3 from "@public/assets/images/user-3.png";
@@ -277,7 +282,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -285,7 +290,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -293,7 +298,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -301,7 +306,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -309,7 +314,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -317,7 +322,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -325,7 +330,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -333,7 +338,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -341,7 +346,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -349,7 +354,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -357,7 +362,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -365,7 +370,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -373,7 +378,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -381,7 +386,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -389,7 +394,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -397,7 +402,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -405,7 +410,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -413,7 +418,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -421,7 +426,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -429,7 +434,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -437,7 +442,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -445,7 +450,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -453,7 +458,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -461,7 +466,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -469,7 +474,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -477,7 +482,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -485,7 +490,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -493,7 +498,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -501,7 +506,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -509,7 +514,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -517,7 +522,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
     date: "June 20",
   },
   {
@@ -525,7 +530,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost2,
     date: "June 20",
   },
   {
@@ -533,7 +538,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost3,
     date: "June 20",
   },
   {
@@ -541,7 +546,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost4,
     date: "June 20",
   },
   {
@@ -549,7 +554,7 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost5,
     date: "June 20",
   },
   {
@@ -557,7 +562,39 @@ export const blogPosts = [
     description:
       "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
     href: "#",
-    imageSrc: BlogImage,
+    imageSrc: BlogPost1,
+    date: "June 20",
+  },
+  {
+    title: "Do millennials care about saving?",
+    description:
+      "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
+    href: "#",
+    imageSrc: BlogPost2,
+    date: "June 20",
+  },
+  {
+    title: "Do millennials care about saving?",
+    description:
+      "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
+    href: "#",
+    imageSrc: BlogPost3,
+    date: "June 20",
+  },
+  {
+    title: "Do millennials care about saving?",
+    description:
+      "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
+    href: "#",
+    imageSrc: BlogPost4,
+    date: "June 20",
+  },
+  {
+    title: "Do millennials care about saving?",
+    description:
+      "Curabitur tincidunt sed neque id pretium. Aenean volutpat tristique tincidunt. Pellentesque ac urna.",
+    href: "#",
+    imageSrc: BlogPost5,
     date: "June 20",
   },
 ];

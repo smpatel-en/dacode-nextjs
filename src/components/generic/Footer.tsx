@@ -45,7 +45,7 @@ const socialLinks: Array<{ name: string; href: string }> = [
 ];
 
 export default function Footer() {
-  const [selectedLanguage, setSelectedLanguage] = React.useState("EN");
+  const [selectedLanguage, setSelectedLanguage] = React.useState("English");
   const [showDropdown, setShowDropdown] = React.useState(false);
 
   useEffect(() => {
@@ -117,32 +117,34 @@ export default function Footer() {
                   </ul>
                 </div>
               ))}
-              <div className="flex flex-col gap-7">
-                <div className="relative w-fit">
-                  <h4
-                    className="inline-flex cursor-pointer items-center gap-2"
-                    onClick={() => setShowDropdown(!showDropdown)}
-                  >
-                    Language <SlArrowDown className="text-lg" />
-                  </h4>
-                  {showDropdown && (
-                    <ul className="absolute right-0 translate-y-2 leading-[30px] lg:translate-y-5 has-[button:hover]:[&>li>button:not(:hover)]:blur-[3px]">
-                      {["EN", "GJ", "HI", "FR"].map((lang) => (
-                        <li key={lang} className="w-full">
-                          <button
-                            className={`${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} hover:text-dark/80 text-right transition-colors duration-300`}
-                            onClick={() => {
-                              setSelectedLanguage(lang);
-                              setShowDropdown(false);
-                            }}
-                          >
-                            {lang}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
+              <div className="flex flex-col gap-2 lg:gap-7">
+                <h4
+                  className="inline-flex cursor-pointer items-center gap-2"
+                  onClick={() => setShowDropdown(!showDropdown)}
+                >
+                  Language{" "}
+                  <SlArrowDown
+                    className={`${showDropdown ? "rotate-180" : ""} transition-transform duration-300`}
+                  />
+                </h4>
+
+                <ul
+                  className={`${showDropdown ? "max-h-30" : "max-h-0"} lg: overflow-hidden leading-[30px] transition-all duration-300 has-[button:hover]:[&>li>button:not(:hover)]:blur-[3px]`}
+                >
+                  {["English", "Gujarati", "Hindi", "French"].map((lang) => (
+                    <li key={lang} className="w-full">
+                      <button
+                        className={`${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} hover:text-dark/80 text-right transition-all duration-300 hover:pl-1`}
+                        onClick={() => {
+                          setSelectedLanguage(lang);
+                          setShowDropdown(false);
+                        }}
+                      >
+                        {lang}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -153,7 +155,7 @@ export default function Footer() {
             <p>© DaCode. 2020</p>
 
             {/* Socials */}
-            <div className="xs:gap-5 flex gap-3 has-[a:hover]:[&>a:not(:hover)]:blur-[3px]">
+            <div className="xs:gap-5 flex gap-3 has-[a:hover]:[&>a:not(:hover)]:blur-[2px]">
               {socialLinks.map((social) => (
                 <Link
                   key={social.name}

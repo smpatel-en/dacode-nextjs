@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { RiMenu5Line } from "react-icons/ri";
 import Button from "../core/Button";
 
@@ -18,6 +19,7 @@ const navigationLinks: Array<{ name: string; href: string }> = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -62,7 +64,11 @@ export default function Header() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-primary hover:text-dark text-lg font-black transition-colors duration-300"
+                      className={`text-lg font-black transition-colors duration-300 ${
+                        pathname === link.href
+                          ? "text-dark"
+                          : "text-primary hover:text-dark"
+                      }`}
                     >
                       {link.name}
                     </Link>
@@ -71,10 +77,12 @@ export default function Header() {
               </ul>
               {/* Navigation CTA Wrapper*/}
               <div className="flex items-center gap-4">
-                <Button className="hidden md:block">Request a Quote</Button>
+                <Button variant="secondary" className="hidden md:block">
+                  Request a Quote
+                </Button>
                 <Button
                   className="block xl:hidden"
-                  variant="outline-primary"
+                  variant="outline-secondary"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                   <RiMenu5Line className="text-xl lg:text-2xl" />
@@ -94,12 +102,19 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-primary hover:text-dark w-fit text-base font-black transition-colors duration-300"
+                  className={`w-fit text-base font-black transition-colors duration-300 ${
+                    pathname === link.href
+                      ? "text-dark"
+                      : "text-primary hover:text-dark"
+                  }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Button className="mt-2 block w-fit md:hidden">
+              <Button
+                variant="secondary"
+                className="mt-2 block w-fit md:hidden"
+              >
                 Request a Quote
               </Button>
             </div>

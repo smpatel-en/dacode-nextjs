@@ -4,6 +4,10 @@ import React from "react";
 import ThumbnailCard from "@/components/core/card/ThumbnailCard";
 import Button from "@/components/core/Button";
 import { blogPosts } from "@/lib/data";
+import {
+  MdOutlineKeyboardDoubleArrowLeft,
+  MdOutlineKeyboardDoubleArrowRight,
+} from "react-icons/md";
 
 export default function BlogGridSection() {
   const paginationSize = 12;
@@ -42,11 +46,11 @@ export default function BlogGridSection() {
             <Button
               size="none"
               variant="primary"
-              className="grid h-10 place-items-center rounded-md px-4"
+              className="grid h-10 w-10 place-items-center rounded-md"
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
             >
-              Previous
+              <MdOutlineKeyboardDoubleArrowLeft className="text-2xl" />
             </Button>
 
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(
@@ -66,11 +70,11 @@ export default function BlogGridSection() {
             <Button
               size="none"
               variant="primary"
-              className="grid h-10 place-items-center rounded-md px-4"
+              className="grid h-10 w-10 place-items-center rounded-md"
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
             >
-              Next
+              <MdOutlineKeyboardDoubleArrowRight className="text-2xl" />
             </Button>
           </div>
         )}
