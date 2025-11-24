@@ -9,6 +9,7 @@
   --light: #ffffff;
 
   --primary-light-15: color-mix(in srgb, var(--primary) 15%, var(--light));
+  --primary-light-60: color-mix(in srgb, var(--primary) 60%, var(--light));
 
   /* Shadow Variables */
   --shadow-primary: 0px 46px 52px 0px #60e1cb8f;
@@ -27,6 +28,7 @@
   --color-dark: var(--dark);
   --color-light: var(--light);
   --color-primary-light-15: var(--primary-light-15);
+  --color-primary-light-60: var(--primary-light-60);
 
   --shadow-primary: var(--shadow-primary);
   --shadow-primary-dark: var(--shadow-primary-dark);
@@ -41,7 +43,7 @@
 
 @layer base {
   body {
-    @apply bg-light text-dark font-dm-sans text-sm font-medium lg:text-base;
+    @apply bg-light text-dark font-dm-sans selection:bg-primary-light-60 text-sm font-medium lg:text-base;
   }
   main {
     @apply min-h-screen pt-14 sm:pt-16 lg:pt-18;

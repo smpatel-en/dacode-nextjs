@@ -10,7 +10,7 @@ type ButtonVariant =
   | "ghost";
 type ButtonSize = "small" | "large" | "none";
 const defaultClass =
-  "cursor-pointer rounded-full border-2 border-transparent text-base lg:text-xl/[120%] font-bold tracking-[0.5%] transition-all duration-200 disabled:pointer-events-none disabled:opacity-20";
+  "cursor-pointer rounded-full border-2 border-transparent text-base lg:text-xl/[120%] font-bold tracking-[0.5%] transition-all duration-200 disabled:pointer-events-none disabled:opacity-20 active:scale-98";
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-primary text-white hover:bg-dark",
   secondary: "bg-secondary text-white hover:bg-dark",

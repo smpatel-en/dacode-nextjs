@@ -103,11 +103,11 @@ export default function Footer() {
                   <h4>{group.header}</h4>
 
                   {/* Option Group Options */}
-                  <ul className="leading-[30px]">
+                  <ul className="leading-[30px] has-[a:hover]:[&>li>a:not(:hover)]:blur-[3px]">
                     {group.options.map((option) => (
                       <li key={option.name}>
                         <Link
-                          className="text-dark/40 hover:text-dark transition-colors duration-300"
+                          className="text-dark/40 hover:text-dark transition-all duration-300 hover:pl-1"
                           href={option.href}
                         >
                           {option.name}
@@ -126,8 +126,8 @@ export default function Footer() {
                     Language <SlArrowDown className="text-lg" />
                   </h4>
                   {showDropdown && (
-                    <ul className="absolute right-0 translate-y-2 leading-[30px] lg:translate-y-5">
-                      {["EN", "ES", "FR", "DE"].map((lang) => (
+                    <ul className="absolute right-0 translate-y-2 leading-[30px] lg:translate-y-5 has-[button:hover]:[&>li>button:not(:hover)]:blur-[3px]">
+                      {["EN", "GJ", "HI", "FR"].map((lang) => (
                         <li key={lang} className="w-full">
                           <button
                             className={`${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} hover:text-dark/80 text-right transition-colors duration-300`}
@@ -153,12 +153,12 @@ export default function Footer() {
             <p>© DaCode. 2020</p>
 
             {/* Socials */}
-            <div className="xs:gap-5 flex gap-3">
+            <div className="xs:gap-5 flex gap-3 has-[a:hover]:[&>a:not(:hover)]:blur-[3px]">
               {socialLinks.map((social) => (
                 <Link
                   key={social.name}
                   href={social.href}
-                  className="text-dark hover:text-dark/70 text-base font-bold transition-colors duration-300 lg:text-[19px]"
+                  className="text-dark hover:text-dark/70 text-base font-bold transition-all duration-300 lg:text-[19px]"
                 >
                   {social.name}
                 </Link>
