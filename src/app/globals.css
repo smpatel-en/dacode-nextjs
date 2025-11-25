@@ -62,10 +62,10 @@
 
   /* Text */
   h1 {
-    @apply text-4xl font-black tracking-[-1.5%] sm:text-5xl lg:text-[58px]/[113%];
+    @apply text-3xl font-black tracking-[-1.5%] sm:text-4xl md:text-5xl lg:text-[58px]/[113%];
   }
   h2 {
-    @apply text-3xl font-bold sm:text-4xl lg:text-5xl/[113%];
+    @apply text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl/[113%];
   }
   h3 {
     @apply text-lg font-bold lg:text-xl;
