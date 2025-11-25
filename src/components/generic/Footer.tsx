@@ -80,7 +80,7 @@ export default function Footer() {
                 <Image
                   src={Logo}
                   alt="dcCode Logo"
-                  className="max-w-36 object-contain sm:max-w-42 lg:max-w-none"
+                  className="h-4.5 w-auto object-contain lg:h-6"
                 />
               </Link>
 

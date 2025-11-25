@@ -60,7 +60,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/">
               <Image
-                className="max-w-36 object-contain transition-transform duration-300 hover:scale-103 sm:max-w-42 lg:max-w-none"
+                className="h-4.5 w-auto object-contain lg:h-6"
                 src={Logo}
                 alt="dcCode Logo"
               />
