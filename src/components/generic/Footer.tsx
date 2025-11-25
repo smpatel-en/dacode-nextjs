@@ -118,27 +118,27 @@ export default function Footer() {
                 </div>
               ))}
               <div className="flex flex-col gap-2 lg:gap-7">
-                <h4
-                  className="inline-flex cursor-pointer items-center gap-2"
-                  onClick={() => setShowDropdown(!showDropdown)}
-                >
-                  Language{" "}
-                  <SlArrowDown
-                    className={`${showDropdown ? "rotate-180" : ""} transition-transform duration-300`}
-                  />
+                <h4 onClick={() => setShowDropdown(!showDropdown)}>
+                  <button className="inline-flex cursor-pointer items-center gap-2">
+                    Language
+                    <SlArrowDown
+                      className={`${showDropdown ? "rotate-180" : ""} transition-transform duration-300`}
+                    />
+                  </button>
                 </h4>
 
                 <ul
-                  className={`${showDropdown ? "max-h-30" : "max-h-0"} lg: overflow-hidden leading-[30px] transition-all duration-300 has-[button:hover]:[&>li>button:not(:hover)]:blur-[3px]`}
+                  className={`${showDropdown ? "max-h-30" : "max-h-0"} overflow-hidden leading-[30px] transition-all duration-300 has-[button:hover]:[&>li>button:not(:hover)]:blur-[3px]`}
                 >
                   {["English", "Gujarati", "Hindi"].map((lang) => (
                     <li key={lang} className="w-full">
                       <button
-                        className={`${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} hover:text-dark/80 text-right transition-all duration-300 hover:pl-1`}
+                        className={`hover:text-dark/80 cursor-pointer text-right transition-all duration-300 hover:pl-1 ${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} `}
                         onClick={() => {
                           setSelectedLanguage(lang);
                           setShowDropdown(false);
                         }}
+                        disabled={!showDropdown}
                       >
                         {lang}
                       </button>

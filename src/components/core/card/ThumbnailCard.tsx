@@ -29,7 +29,7 @@ export default function ProfileCard({
           {date}
         </span>
       </div>
-      <div className="flex h-full flex-col items-center p-6.5 text-center">
+      <div className="flex h-full flex-col items-center p-6.5 text-center text-pretty">
         <h3 className="mb-2 text-lg font-bold tracking-[-0.5px]">{title}</h3>
         <p className="mb-4.5 leading-[163%] opacity-60">{description}</p>
         <Button
