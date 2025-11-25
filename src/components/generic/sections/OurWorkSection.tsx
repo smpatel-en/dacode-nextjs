@@ -26,8 +26,8 @@ export default function OurWork() {
       : portfolioItems.filter((item) => item.tag === activeTag);
 
   return (
-    <section className="relative">
-      <div className="container">
+    <section className="from-light to-primary relative bg-linear-to-b from-60% to-60%">
+      <div className="container max-w-none px-0">
         {/* Wrapper */}
         <div>
           {/* Header */}
@@ -50,16 +50,70 @@ export default function OurWork() {
               ))}
             </div>
 
-            {/* Slider For Images */}
             <div className="relative mb-4 lg:mb-8">
+              <div className="relative container">
+                {/* Slider For Images */}
+                <Swiper
+                  modules={[Navigation, Controller]}
+                  slidesPerView={3}
+                  spaceBetween={35}
+                  navigation={{
+                    nextEl: ".work-custom-swiper-button-next",
+                    prevEl: ".work-custom-swiper-button-prev",
+                  }}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                    },
+                  }}
+                  onSwiper={setFirstSwiper}
+                  controller={{ control: secondSwiper }}
+                >
+                  {filteredItems.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="aspect-3/2 overflow-hidden rounded-2xl">
+                        <Image
+                          src={item.image}
+                          alt={`Portfolio item ${index + 1}`}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                {/* Navigation Button Wrapper */}
+                <div className="absolute inset-0 flex w-full items-center justify-between">
+                  <Button
+                    size="none"
+                    variant="outline-primary"
+                    className="work-custom-swiper-button-prev bg-light z-1 hidden -translate-x-1/4 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
+                  >
+                    <IoIosArrowBack className="text-4xl" />
+                  </Button>
+                  <Button
+                    size="none"
+                    variant="outline-primary"
+                    className="work-custom-swiper-button-next bg-light z-1 hidden translate-x-1/4 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
+                  >
+                    <IoIosArrowForward className="text-4xl" />
+                  </Button>
+                </div>
+              </div>
+              {/* Background */}
+              <div className="bg-primary absolute inset-0 top-1/2 h-1/2 w-full"></div>
+            </div>
+
+            <div className="container">
+              {/* Swiper Slider For Text */}
               <Swiper
-                modules={[Navigation, Controller]}
+                modules={[Controller]}
                 slidesPerView={3}
                 spaceBetween={35}
-                navigation={{
-                  nextEl: ".work-custom-swiper-button-next",
-                  prevEl: ".work-custom-swiper-button-prev",
-                }}
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
@@ -71,64 +125,16 @@ export default function OurWork() {
                     slidesPerView: 3,
                   },
                 }}
-                onSwiper={setFirstSwiper}
-                controller={{ control: secondSwiper }}
+                onSwiper={setSecondSwiper}
+                controller={{ control: firstSwiper }}
               >
                 {filteredItems.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className="aspect-3/2 overflow-hidden rounded-2xl">
-                      <Image
-                        src={item.image}
-                        alt={`Portfolio item ${index + 1}`}
-                      />
-                    </div>
+                    <p className="text-base lg:text-lg/[170%]">{item.text}</p>
                   </SwiperSlide>
                 ))}
               </Swiper>
-              {/* Navigation Button Wrapper */}
-              <div className="absolute inset-0 flex w-full items-center justify-between">
-                <Button
-                  size="none"
-                  variant="outline-primary"
-                  className="work-custom-swiper-button-prev bg-light z-1 hidden -translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
-                >
-                  <IoIosArrowBack className="text-4xl" />
-                </Button>
-                <Button
-                  size="none"
-                  variant="outline-primary"
-                  className="work-custom-swiper-button-next bg-light z-1 hidden translate-x-1/2 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
-                >
-                  <IoIosArrowForward className="text-4xl" />
-                </Button>
-              </div>
             </div>
-
-            {/* Swiper Slider For Text */}
-            <Swiper
-              modules={[Controller]}
-              slidesPerView={3}
-              spaceBetween={35}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-              }}
-              onSwiper={setSecondSwiper}
-              controller={{ control: firstSwiper }}
-            >
-              {filteredItems.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <p className="text-base lg:text-lg/[170%]">{item.text}</p>
-                </SwiperSlide>
-              ))}
-            </Swiper>
           </div>
         </div>
       </div>

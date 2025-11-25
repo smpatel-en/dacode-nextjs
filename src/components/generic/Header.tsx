@@ -52,7 +52,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 z-10 w-full border-b-2 py-3 backdrop-blur-md transition-all duration-300 lg:py-5 ${isScrolled ? "border-b-dark/30 bg-light/90" : "bg-light border-b-transparent"} `}
+        className={`fixed top-0 z-10 w-full border-b-2 py-3 backdrop-blur-md transition-all duration-300 lg:py-5 ${isScrolled ? "border-b-dark/30 bg-light/95" : "bg-light border-b-transparent"} `}
       >
         <div className="container">
           {/* Navigation Wrapper | Desktop */}

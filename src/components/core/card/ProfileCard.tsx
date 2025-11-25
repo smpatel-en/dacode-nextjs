@@ -40,7 +40,7 @@ export default function ProfileCard({
       </Link>
       <Button
         href={`mailto:${email}`}
-        className="bg-primary text-light rounded-full px-4 py-2.5 text-sm lg:text-base"
+        className="bg-primary text-light rounded-full px-4 py-2.5 text-sm shadow-none! lg:text-base"
         size="none"
       >
         {email}

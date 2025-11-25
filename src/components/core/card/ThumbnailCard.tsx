@@ -35,7 +35,7 @@ export default function ProfileCard({
         <Button
           size="none"
           href={href}
-          className="mt-auto px-4 py-2.5 text-sm lg:text-base"
+          className="mt-auto px-4 py-2.5 text-sm shadow-none! lg:text-base"
         >
           Read More
         </Button>
