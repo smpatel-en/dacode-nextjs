@@ -10,7 +10,7 @@ type HeadingLastWordHighlight = boolean;
 // Deafult Classes
 const typeClasses: Record<HeadingType, string> = {
   section: "flex flex-col gap-3 lg:gap-6.5 mb-6 lg:mb-12.5",
-  page: "relative flex flex-col gap-6.5",
+  page: "relative flex flex-col gap-6.5 -z-1",
 };
 
 interface HeadingProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -30,7 +30,7 @@ const InsetMarginClasses: Record<InsetMargin, string> = {
 
 const variantClasses: Record<HeadingVariant, string> = {
   centered: "items-center text-center",
-  left: "items-start text-left",
+  left: "lg:items-start  text-center items-center lg:text-left mx-auto lg:mx-0",
 };
 
 export default function Heading({

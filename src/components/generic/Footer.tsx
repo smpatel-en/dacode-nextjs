@@ -80,7 +80,7 @@ export default function Footer() {
                 <Image
                   src={Logo}
                   alt="dcCode Logo"
-                  className="h-4.5 w-auto object-contain lg:h-6"
+                  className="h-4 w-auto object-contain sm:h-5 lg:h-6"
                 />
               </Link>
 
@@ -131,7 +131,7 @@ export default function Footer() {
                 <ul
                   className={`${showDropdown ? "max-h-30" : "max-h-0"} lg: overflow-hidden leading-[30px] transition-all duration-300 has-[button:hover]:[&>li>button:not(:hover)]:blur-[3px]`}
                 >
-                  {["English", "Gujarati", "Hindi", "French"].map((lang) => (
+                  {["English", "Gujarati", "Hindi"].map((lang) => (
                     <li key={lang} className="w-full">
                       <button
                         className={`${lang === selectedLanguage ? "text-dark font-bold" : "text-dark/40"} hover:text-dark/80 text-right transition-all duration-300 hover:pl-1`}

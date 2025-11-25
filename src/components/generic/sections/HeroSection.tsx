@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="container h-full">
         {/* Wrapper */}
         <div className="flex flex-col">
-          <div className="xs:items-start xs:text-left mx-auto flex max-w-200 flex-col items-center gap-7.5 py-10 text-center lg:py-30 xl:mx-0 xl:max-w-160">
+          <div className="mx-auto flex max-w-200 flex-col items-center gap-7.5 text-center lg:py-5 xl:mx-0 xl:max-w-160 xl:items-start xl:py-30 xl:text-left">
             <div className="bg-secondary h-1 w-40"></div>
             <h1>
               We help you create your{" "}
@@ -21,7 +21,7 @@ export default function HeroSection() {
               Donec amet phasellus
             </p>
             {/* Hero CTA Button Wrapper */}
-            <div className="xs:justify-start xs:flex-row flex flex-col items-center justify-center gap-5">
+            <div className="xs:justify-start flex items-center justify-center gap-5">
               <Button size="large">Get Started</Button>
               <Button variant="outline-primary">Contact Us</Button>
             </div>

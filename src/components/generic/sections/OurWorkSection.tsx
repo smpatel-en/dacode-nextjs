@@ -36,7 +36,7 @@ export default function OurWork() {
           {/* Body */}
           <div>
             {/* Filter tags */}
-            <div className="mb-10 flex flex-wrap justify-center gap-4">
+            <div className="mb-10 flex flex-wrap justify-center gap-2 lg:gap-4">
               {uniqueTags.map((tag, index) => (
                 <Button
                   key={index}
@@ -65,7 +65,7 @@ export default function OurWork() {
                     0: {
                       slidesPerView: 1,
                     },
-                    768: {
+                    480: {
                       slidesPerView: 2,
                     },
                     1024: {
@@ -86,19 +86,20 @@ export default function OurWork() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
+
                 {/* Navigation Button Wrapper */}
                 <div className="absolute inset-0 flex w-full items-center justify-between">
                   <Button
                     size="none"
                     variant="outline-primary"
-                    className="work-custom-swiper-button-prev bg-light z-1 hidden -translate-x-1/4 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
+                    className="work-custom-swiper-button-prev bg-light z-1 hidden place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
                   >
                     <IoIosArrowBack className="text-4xl" />
                   </Button>
                   <Button
                     size="none"
                     variant="outline-primary"
-                    className="work-custom-swiper-button-next bg-light z-1 hidden translate-x-1/4 place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
+                    className="work-custom-swiper-button-next bg-light z-1 hidden place-items-center md:grid md:h-14 md:w-14 xl:h-16 xl:w-16"
                   >
                     <IoIosArrowForward className="text-4xl" />
                   </Button>
@@ -118,7 +119,7 @@ export default function OurWork() {
                   0: {
                     slidesPerView: 1,
                   },
-                  768: {
+                  480: {
                     slidesPerView: 2,
                   },
                   1024: {

@@ -14,6 +14,7 @@
   /* Shadow Variables */
   --shadow-primary: 0px 46px 52px 0px #60e1cb8f;
   --shadow-primary-dark: 0px 46px 52px 0px #36b8a2;
+  --shadow-slg: 0px 36px 39px 0px #07003b0a;
   --shadow-lg: 0px 97px 90px 0px #07003b1f;
   --shadow-md: 0px 56px 60px -14px #0d0f451a;
   --shadow-sm: 0px 32px 41px 0px #00000021;
@@ -35,6 +36,7 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-md: var(--shadow-md);
   --shadow-sm: var(--shadow-sm);
+  --shadow-slg: var(--shadow-slg);
 
   --font-dm-sans: var(--font-dm-sans);
 
@@ -80,3 +82,18 @@
     @apply text-sm lg:text-base;
   }
 }
+.nav-link::before,
+.nav-link:after {
+  @apply bg-dark absolute -bottom-1 left-0 h-0.5 transition-all;
+}
+
+.nav-link::before {
+  @apply bg-dark/50 w-0;
+}
+.nav-link:hover::before {
+  @apply w-full;
+}
+
+/* after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:transition-all after:duration-300 hover:after:w-full 
+ after:bg-dark after:w-full
+after:bg-dark/50 after:w-0 */

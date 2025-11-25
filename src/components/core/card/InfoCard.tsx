@@ -22,7 +22,10 @@ export default function InfoCard({
   ...props
 }: InfoCardProps) {
   return (
-    <div className={cn(defaultClass, className)} {...props}>
+    <div
+      className={cn(defaultClass, icon ? "shadow-lg" : "shadow-slg", className)}
+      {...props}
+    >
       {icon && (
         <>
           <div className="bg-primary absolute inset-0 h-[7px] w-full" />

@@ -22,13 +22,13 @@ export default function BlogSection() {
             subtitle="News & Articles"
             description="On daCode blog we will review the latest in web development for the SaaS-, tech- and crypto industry."
             variant="left"
-            className="z-1 mb-6.5 max-w-lg"
+            className="z-1 max-w-lg"
           >
             {/* CTA Button */}
             <Button variant="outline-secondary">See All</Button>
           </Heading>
           {/* Right */}
-          <div className="relative z-0">
+          <div className="relative z-0 h-fit px-0 pb-18 lg:px-8 lg:pb-0">
             <Swiper
               modules={[Navigation]}
               navigation={{
@@ -36,8 +36,7 @@ export default function BlogSection() {
                 prevEl: ".blog-custom-swiper-button-prev",
               }}
               slidesPerView="auto"
-              spaceBetween={30}
-              className="lg:overflow-visible!"
+              className="overflow-visible!"
               breakpoints={{
                 0: {
                   slidesPerView: 1,
@@ -58,23 +57,24 @@ export default function BlogSection() {
                     title={post.title}
                     description={post.description}
                     href={post.href}
+                    className="mx-4"
                   />
                 </SwiperSlide>
               ))}
             </Swiper>
             {/* Navigation Buttons */}
-            <div className="absolute inset-0 hidden w-full items-center justify-between md:flex">
+            <div className="absolute inset-0 hidden w-full items-end justify-center gap-4 md:flex lg:items-center lg:justify-between">
               <Button
                 variant="primary"
                 size="none"
-                className="blog-custom-swiper-button-prev z-1 grid h-16 w-16 -translate-x-1/2 place-items-center shadow-sm lg:translate-0"
+                className="blog-custom-swiper-button-prev z-1 grid h-12 w-12 place-items-center shadow-sm lg:h-16 lg:w-16 lg:translate-0"
               >
                 <IoIosArrowBack className="text-3xl" />
               </Button>
               <Button
                 variant="primary"
                 size="none"
-                className="blog-custom-swiper-button-next z-1 grid h-16 w-16 translate-x-1/2 place-items-center shadow-sm lg:translate-0"
+                className="blog-custom-swiper-button-next z-1 grid h-12 w-12 place-items-center shadow-sm lg:h-16 lg:w-16 lg:translate-0"
               >
                 <IoIosArrowForward className="text-3xl" />
               </Button>

@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="mx-auto flex max-w-none flex-col items-center rounded-xl p-6 shadow-lg sm:p-12 lg:max-w-[70%] lg:p-15">
+                  <div className="mx-auto flex max-w-none flex-col items-center rounded-xl p-6 shadow-lg sm:p-12 md:max-w-[80%] lg:p-15 xl:max-w-[70%]">
                     {/* Rating Number */}
                     <p className="mb-1 text-xl font-bold tracking-[0.6px] sm:text-2xl lg:text-[32px]">
                       {testimonial.rating}.0
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
                       ))}
                     </div>
                     {/* Comment */}
-                    <p className="text-base italic sm:text-lg lg:text-2xl/[177%]">
+                    <p className="text-base italic md:text-lg lg:text-2xl/[177%]">
                       {testimonial.comment}
                     </p>
                   </div>

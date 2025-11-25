@@ -40,6 +40,13 @@ export default function Header() {
       }
     };
 
+    // disable scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
@@ -60,7 +67,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/">
               <Image
-                className="h-4.5 w-auto object-contain lg:h-6"
+                className="h-4 w-auto object-contain sm:h-5 lg:h-6"
                 src={Logo}
                 alt="dcCode Logo"
               />
@@ -69,15 +76,15 @@ export default function Header() {
             {/* Navigation Links and CTA*/}
             <div className="flex items-center gap-6 lg:gap-12">
               {/* Navigation Links */}
-              <ul className="hidden list-none items-center gap-6 lg:gap-12 xl:flex">
+              <ul className="hidden list-none items-center gap-4 lg:gap-8 xl:flex">
                 {navigationLinks.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} className="relative">
                     <Link
                       href={link.href}
-                      className={`text-lg font-black transition-colors duration-300 ${
+                      className={`p-2 text-lg font-black transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:transition-all after:duration-300 hover:after:w-full ${
                         pathname === link.href
-                          ? "text-dark"
-                          : "text-primary hover:text-dark"
+                          ? "text-dark after:bg-dark after:w-full"
+                          : "text-primary hover:text-dark after:bg-dark/50 after:w-0"
                       }`}
                     >
                       {link.name}
@@ -107,15 +114,15 @@ export default function Header() {
           {/* Padding Suppressor */}
           <div className="container">
             {/* Wrapper */}
-            <div className="mt-2 flex flex-col gap-4 py-4">
+            <div className="mt-2 flex flex-col gap-1 py-4">
               {navigationLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`w-fit text-base font-black transition-colors duration-300 ${
+                  className={`border-l-3 p-2 text-base font-black transition-colors duration-300 ${
                     pathname === link.href
-                      ? "text-dark"
-                      : "text-primary hover:text-dark"
+                      ? "text-dark border-l-dark bg-dark/15"
+                      : "text-primary hover:text-dark hover:bg-dark/10 border-l-transparent"
                   }`}
                 >
                   {link.name}
