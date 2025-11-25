@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Top */}
           <div className="mb-12.5 flex flex-col gap-10 xl:flex-row">
             {/* Header */}
-            <div className="flex shrink-0 flex-col gap-7.5">
+            <div className="flex shrink-0 flex-col gap-3 lg:gap-7.5">
               {/* Footer Logo */}
               <Link href="/" className="w-fit">
                 <Image

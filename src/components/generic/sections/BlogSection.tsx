@@ -15,7 +15,7 @@ export default function BlogSection() {
       <div className="bg-primary-light-15 absolute inset-0 top-0 left-0 z-1 hidden h-full w-1/2 lg:block" />
       <div className="container">
         {/* Wrapper */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left | Header */}
           <Heading
             title="DaCode Blog"
@@ -42,7 +42,8 @@ export default function BlogSection() {
                 0: {
                   slidesPerView: 1,
                 },
-                480: {
+
+                640: {
                   slidesPerView: 2,
                 },
 

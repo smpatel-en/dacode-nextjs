@@ -13,7 +13,8 @@ export default function ServicesSection({
 }: ServicesSectionProps) {
   return explicitContainer ? (
     <section className={className} {...props}>
-      <div className="bg-primary-light-15 mx-4 rounded-3xl py-8 lg:mx-21 lg:rounded-[40px] lg:py-20">
+      {/* Extra container */}
+      <div className="bg-primary-light-15 rounded-3xl py-8 sm:mx-4 lg:mx-21 lg:rounded-[40px] lg:py-20">
         <div className="container max-w-6xl">
           {/* Wrapper */}
           <div>

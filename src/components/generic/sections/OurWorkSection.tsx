@@ -51,7 +51,7 @@ export default function OurWork() {
             </div>
 
             {/* Slider For Images */}
-            <div className="relative mb-8">
+            <div className="relative mb-4 lg:mb-8">
               <Swiper
                 modules={[Navigation, Controller]}
                 slidesPerView={3}
@@ -125,7 +125,7 @@ export default function OurWork() {
             >
               {filteredItems.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <p className="text-lg/[170%]">{item.text}</p>
+                  <p className="text-base lg:text-lg/[170%]">{item.text}</p>
                 </SwiperSlide>
               ))}
             </Swiper>

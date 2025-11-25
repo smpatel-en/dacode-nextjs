@@ -46,7 +46,7 @@ export default function InfoSection() {
 
           {/* Right */}
           <div>
-            <h3 className="text-primary mb-5.5 text-3xl lg:text-4xl">
+            <h3 className="text-primary mb-5.5 text-2xl sm:text-3xl lg:text-4xl">
               Schedule a free session
             </h3>
             {/* Image */}

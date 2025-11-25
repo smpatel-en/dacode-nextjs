@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
           <Heading title="Our Happy Clients" subtitle="Testiomonials" />
 
           {/* Body */}
-          <div className="mb-12.5">
+          <div className="mb-6 lg:mb-12.5">
             {/* Testimonial Content */}
             <Swiper
               className="overflow-visible!"
@@ -43,20 +43,20 @@ export default function TestimonialsSection() {
                 <SwiperSlide key={index}>
                   <div className="mx-auto flex max-w-none flex-col items-center rounded-xl p-6 shadow-lg sm:p-12 lg:max-w-[70%] lg:p-15">
                     {/* Rating Number */}
-                    <p className="mb-1 text-2xl font-bold tracking-[0.6px] lg:text-[32px]">
+                    <p className="mb-1 text-xl font-bold tracking-[0.6px] sm:text-2xl lg:text-[32px]">
                       {testimonial.rating}.0
                     </p>
                     {/* Rating Star Container */}
-                    <div className="mb-6 flex">
+                    <div className="mb-3 flex lg:mb-6">
                       {[...Array(testimonial.rating)].map((_, starIndex) => (
                         <FaStar
                           key={starIndex}
-                          className="text-lg text-yellow-400 lg:text-2xl"
+                          className="text-base text-yellow-400 sm:text-lg lg:text-2xl"
                         />
                       ))}
                     </div>
                     {/* Comment */}
-                    <p className="text-lg italic lg:text-2xl/[177%]">
+                    <p className="text-base italic sm:text-lg lg:text-2xl/[177%]">
                       {testimonial.comment}
                     </p>
                   </div>
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
               slideToClickedSlide={true}
               breakpoints={{
                 0: {
-                  slidesPerView: 2,
+                  slidesPerView: 2.5,
                 },
                 480: {
                   slidesPerView: 3,
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
                       <>
                         {/* Image Wrapper */}
                         <div
-                          className={`mx-auto mb-7.5 max-w-30 overflow-hidden rounded-full transition-all duration-300 ${getSlideScale()} ${getSlideOpacity()} ${isActive ? "border-secondary/50 border-4 shadow-sm" : "cursor-pointer border-2 border-transparent"} `}
+                          className={`mx-auto mb-4 max-w-25 overflow-hidden rounded-full transition-all duration-300 lg:mb-7.5 lg:max-w-30 ${getSlideScale()} ${getSlideOpacity()} ${isActive ? "border-secondary/50 border-4 shadow-sm" : "cursor-pointer border-2 border-transparent"} `}
                         >
                           <Image
                             src={testimonial.avatar}
@@ -133,7 +133,7 @@ export default function TestimonialsSection() {
                         <div
                           className={`flex flex-col items-center text-center transition-all duration-300 ${isActive ? "opacity-100" : "opacity-0"}`}
                         >
-                          <p className="mb-2.5 text-lg font-bold whitespace-nowrap lg:text-[22px]">
+                          <p className="mb-1 text-lg font-bold whitespace-nowrap lg:mb-2.5 lg:text-[22px]">
                             {testimonial.name}
                           </p>
                           <p className="text-primary whitespace-nowrap">

@@ -5,7 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import Button from "../Button";
 
 const defaultClass =
-  "flex flex-col items-center bg-light rounded-xl p-4 lg:p-10 text-center shadow-md";
+  "flex flex-col items-center bg-light rounded-xl p-4 lg:p-10 text-center shadow-md max-w-xs xs:max-w-none w-full mx-auto";
 
 interface ProfileCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -34,7 +34,7 @@ export default function ProfileCard({
       <p className="text-primary mb-2">{role}</p>
       <Link
         href={linkedInUrl}
-        className="bg-primary/30 hover:bg-primary/50 mb-3 grid h-9 w-9 place-items-center rounded-full shadow-sm transition-colors lg:mb-5.5"
+        className="bg-primary/30 hover:bg-primary/50 mt-auto mb-3 grid h-9 w-9 place-items-center rounded-full shadow-sm transition-colors lg:mb-5.5"
       >
         <FaLinkedinIn className="text-xl" />
       </Link>
