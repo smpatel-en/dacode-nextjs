@@ -60,7 +60,7 @@ export default function BlogGridSection() {
                   variant={currentPage === pageNum ? "primary" : "ghost"}
                   key={pageNum}
                   onClick={() => handlePageChange(pageNum)}
-                  className="grid h-10 w-10 place-items-center rounded-md"
+                  className={`grid h-10 w-10 place-items-center rounded-md ${currentPage === pageNum && "pointer-events-none"}`}
                 >
                   {pageNum}
                 </Button>
